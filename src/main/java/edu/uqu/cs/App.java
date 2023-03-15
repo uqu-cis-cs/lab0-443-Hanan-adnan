@@ -1,4 +1,5 @@
 package edu.uqu.cs;
+import java.util.Scanner;
 /*
  * Lab 0 
  * CS 1312
@@ -42,17 +43,68 @@ public class App{
 * Output: 2255464228626
 *
 */
- 
-    public static void main(String [] args) {
-        
-
-        /* Write your code here */
-     
-       //call method twisters()
-       //prompt user to enter a string 
-       //call method phoneKeypad(string)
+    public static void main(String [] args){
 
 
-    }
+    Scanner hanan=new Scanner(System.in);
 
+      twisters();
+      System.out.println("enter a string");
+      String str=hanan.nextLine();
+      phoneKeypad(str);
+   }
+
+     public static void twisters ()
+     {
+       for ( int num=1;num<=110;num++)
+       {
+       if (num%2==0) System.out.print("Tweetle");
+       if (num%4==0) System.out.print("Beetle");    
+       if (num%6==0) System.out.print("Poodle"); 
+       if (num%2!=0 && num%4!=0 && num%6!=0)System.out.print(" "+num+" "); 
+       if (num%11==0) System.out.println("");
+       }
+        }
+
+      public static void phoneKeypad (String str){
+      for(int i=0;i<str.length();i++){
+      char upper=Character.toUpperCase(str.charAt(i));
+      switch (upper){
+         case 'A':
+         case 'B':
+         case 'C':
+         System.out.print(2);break;
+         case 'D':
+         case 'E':
+         case 'F':
+         System.out.print(3);break;
+         case 'G':
+         case 'H':
+         case 'I':
+         System.out.print(4);break;
+         case 'J':
+         case 'K':
+         case 'L':
+         System.out.print(5);break;
+          case 'M':
+         case 'N':
+         case 'O':
+         System.out.print(6);break;
+         case 'P':
+         case 'Q':
+         case 'R':
+         case 'S':
+         System.out.print(7);break;
+         case 'T':
+         case 'U':
+         case 'V':
+         System.out.print(8);break;
+         case 'W':
+         case 'X':
+         case 'Y':
+         case 'Z':
+         System.out.print(9);break;
+         case ' ':
+         System.out.print("");break;}
+     }}
 }
